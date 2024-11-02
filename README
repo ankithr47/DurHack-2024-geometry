@@ -1,1 +1,6 @@
+To-Do list:
+Make RPN evaluator in shunter.py (DONE)
+Make infix to postfix function in shunter.py (IN PROGRESS)
 
+Make camera work (DONE)
+Find out how to make you own objects with YOLO
