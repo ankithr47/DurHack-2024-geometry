@@ -14,7 +14,10 @@ while True:
     x_list.append(int(coords[0]))
     y_list.append(int(coords[1]))
 
-points = np.column_stack((x_list, y_list))
+x_new_lst, y_new_lst = node.order(x_list, y_list)
+
+
+points = np.column_stack((x_new_lst, y_new_lst))
 p = Polygon(points)
 ax = plt.gca()
 ax.add_patch(p)
