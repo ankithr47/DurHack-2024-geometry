@@ -19,4 +19,3 @@ def evaluate(expression):
         else:
             a.push(int(expression[i]))
     return a.pop()
-print(evaluate("15+15+*"))
