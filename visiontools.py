@@ -9,6 +9,7 @@ cap.set(4, 480)
 # model
 model = YOLO("yolo-Weights/yolov8n.pt")
 
+
 # object classes
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
               "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
