@@ -30,12 +30,14 @@ class node:
         nodelist = []
         for i in range(0,len(xlist)):
             nodelist.append(node(xlist[i],ylist[i]))
-        s1 = node.distanceList([nodelist[0],nodelist[1],nodelist[2]])
-        s2 = node.distanceList([nodelist[0],nodelist[3],nodelist[2]])
-        p1 = math.sqrt(s1(s1-nodelist[0].distanceFrom(nodelist[1]))(s1-nodelist[1].distanceFrom(nodelist[2]))(s1-nodelist[2].distanceFrom(nodelist[0])))
-        p2 = math.sqrt(s2(s2-nodelist[0].distanceFrom(nodelist[3]))(s2-s1-nodelist[3].distanceFrom(nodelist[2]))(s2-nodelist[2].distanceFrom(nodelist[0])))
+        s1 = node.distanceList([nodelist[0],nodelist[1],nodelist[2]])/2
+        s2 = node.distanceList([nodelist[0],nodelist[3],nodelist[2]])/2
+        print(s1)
+        print(s2)
+        p1 = math.sqrt(s1*(s1-nodelist[0].distanceFrom(nodelist[1]))*(s1-nodelist[1].distanceFrom(nodelist[2]))*(s1-nodelist[2].distanceFrom(nodelist[0])))
+        p2 = math.sqrt(s2*(s2-nodelist[0].distanceFrom(nodelist[3]))*(s2-nodelist[3].distanceFrom(nodelist[2]))*(s2-nodelist[2].distanceFrom(nodelist[0])))
         return p1 + p2
-list1, list2 = node.order([0,1,5,6],[0,5,1,4])
+list1, list2 = node.order([0,2,0,2],[0,2,2,0])
 print(list1)
 print(list2)
 print(node.area(list1,list2))
