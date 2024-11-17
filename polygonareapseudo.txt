@@ -1,0 +1,28 @@
+Algorithm to find area of any polygon:
+
+nodes = [v0, v1, v2, v3 etc] (list of coordinates of vertices of polygon)
+let vi have coordinates (xi, yi), with nodes[i].x = xi and nodes[i].y = yi
+let polygon be the shape made by connecting the points
+
+i = 0
+total_area = 0
+while len(nodes) > 3:
+    test_coord = ((nodes[i].x +nodes[i+2].x) / 2, nodes[i].y+nodes[i+2].y / 2)
+    if test_coord within polygon:
+        calculate area of triangle nodes[i], nodes[i+1], nodes[i+2]
+        total_area += area of triangle
+        nodes.pop(i+1)
+        i = (i+1) % len(nodes)
+    else:
+        i = (i+1) % len(nodes)
+total_area += area of triangle (from coordinates remaining in nodes)
+return total_area
+
+
+
+
+    
+    
+
+
+
