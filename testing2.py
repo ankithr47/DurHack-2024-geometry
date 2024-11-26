@@ -1,4 +1,4 @@
-#testing if this individual function works
+#testing if this function works, it doesn't at the moment
 
 from node import *
 
