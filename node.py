@@ -39,15 +39,6 @@ class node:
         order_y = [node.y for node in best_order]
 
         return order_x, order_y
-
-    """
-    if (d1 < d2 and d1 < d3):
-        return [node0.x,node1.x,node2.x,node3.x], [node0.y,node1.y,node2.y,node3.y]
-    elif (d2 < d1 and d2 < d3):
-        return [node0.x,node1.x,node3.x,node2.x], [node0.y,node1.y,node3.y,node2.y]
-    else:
-        return [node0.x,node2.x,node1.x,node3.x], [node0.y,node2.y,node1.y,node3.y]
-    """
     
     def area(xlist,ylist):
         nodelist = []
@@ -58,6 +49,10 @@ class node:
         p1 = math.sqrt(s1*(s1-nodelist[0].distanceFrom(nodelist[1]))*(s1-nodelist[1].distanceFrom(nodelist[2]))*(s1-nodelist[2].distanceFrom(nodelist[0])))
         p2 = math.sqrt(s2*(s2-nodelist[0].distanceFrom(nodelist[3]))*(s2-nodelist[3].distanceFrom(nodelist[2]))*(s2-nodelist[2].distanceFrom(nodelist[0])))
         return p1 + p2
+
+    #the function below doesn't quite work yet, its aim is to find the area
+    #of any regular/irregular polygon by splitting it up into triangles
+    #and computing the area of each triangle using Heron's formula
 
     def total_area(xlist, ylist):
         #create list of x, y nodes
