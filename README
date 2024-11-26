@@ -1,7 +1,9 @@
-Durhack project, Developed a Python-based program to compute and 
+**Durhack project**
+
+Developed a Python-based program to compute and 
 visualize quadrilateral areas using matplotlib.  
 
-To overcome the challenge of irregular shapes, we decided to split each quadrilateral
-into 2 triangles, and computed the area of each triangled using Heron's formula.
+To overcome the challenge of irregular shapes, we split each quadrilateral into 2 triangles, and computed the area of each triangled using Heron's formula.
+Currently, we are trying to extend this to computing the area of any n-sided polygon.
 
-Currently, we are trying to extend this to compute the area of any n-sided polygon.
+**Run the code** by running 2Dshapeinterface.py. Import the node class &ensure all imported modules are installed on your device.
