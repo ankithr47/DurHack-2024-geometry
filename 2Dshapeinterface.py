@@ -32,7 +32,7 @@ ax.set_ylim(min(y_list)-1, max(y_list)+1)
 plt.axvline(x=0, c="black")
 plt.axhline(y=0, c="black")
 
-# display the text showing the area underneath the shape
+# display the (text showing the area) underneath the shape
 plt.text(x=sum(x_list)/len(x_list), y=min(y_list)-0.5, s=(f'area = {round(node.area(x_list,y_list), 2)}'))
 # show the plot
 plt.show()
