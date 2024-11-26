@@ -59,7 +59,7 @@ class node:
         a2 = math.sqrt(s2*(s2-nodelist[0].distanceFrom(nodelist[3]))*(s2-nodelist[3].distanceFrom(nodelist[2]))*(s2-nodelist[2].distanceFrom(nodelist[0]))) # a2 = area of triangle 2
         return a1 + a2
 
-    '''the function below doesn't quite work yet. Its aim is to find the area
+    '''Function below doesn't quite work yet. The aim is to find the area
     of any regular/irregular polygon by splitting it up into triangles
     (via an algorithm shown on polygonareapseudo.txt) and computing the area of each triangle using Heron's formula'''
 
