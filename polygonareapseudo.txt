@@ -1,8 +1,16 @@
-Algorithm to find area of any polygon:
+Algorithm to find area of a polygon of n sides:
 
+Label the vertices as v0 to v(n-1)
 nodes = [v0, v1, v2, v3 etc] (list of coordinates of vertices of polygon)
-let vi have coordinates (xi, yi), with nodes[i].x = xi and nodes[i].y = yi
+for i in range len(nodes), let nodes[i] have coordinates (xi, yi), with nodes[i].x = xi and nodes[i].y = yi
 let polygon be the shape made by connecting the points
+
+check if the midpoint of nodes[i] and nodes[i+2] lies within the polygon.
+If it does, calculate the area of triangle with vertices nodes[i], nodes[i+1], nodes[i+2]
+remove nodes[i+1], let i = (i+1)%len(nodes)
+else, let i = (i+1) % len(nodes)
+once length of nodes reaches 3, add area of remaining triangle
+
 
 i = 0
 total_area = 0
