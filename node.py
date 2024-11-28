@@ -72,7 +72,7 @@ class node:
         i = 0
         tot_area = 0
         while len(nodes) > 3:
-            test_coord = shapely.geometry.Point((nodes[i % len(nodes)].x + nodes[(i+2) % len(nodes)].x)/2, nodes[i % len(nodes)].y + nodes[(i+2) % len(nodes)].y/2)
+            test_coord = shapely.geometry.Point((nodes[i % len(nodes)].x + nodes[(i+2) % len(nodes)].x)/2, (nodes[i % len(nodes)].y + nodes[(i+2) % len(nodes)].y)/2)
             # check if test coordinate is inside the polygon, if so, find area of the triangle
             if test_coord.within(polygon):
                 s = node.total_distance([nodes[i % len(nodes)], nodes[(i+1) % len(nodes)], nodes[(i+2) % len(nodes)]]) / 2

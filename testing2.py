@@ -13,7 +13,7 @@ def total_area(xlist, ylist):
         i = 0
         tot_area = 0
         while len(nodes) > 3:
-            test_coord = shapely.geometry.Point((nodes[i % len(nodes)].x + nodes[(i+2) % len(nodes)].x)/2, nodes[i % len(nodes)].y + nodes[(i+2) % len(nodes)].y/2)
+            test_coord = shapely.geometry.Point((nodes[i % len(nodes)].x + nodes[(i+2) % len(nodes)].x)/2, (nodes[i % len(nodes)].y + nodes[(i+2) % len(nodes)].y)/2)
             #check if test coordinate is inside the polygon, if so, find area of the triangle
             if test_coord.within(polygon):
                 s = node.total_distance([nodes[i % len(nodes)], nodes[(i+1) % len(nodes)], nodes[(i+2) % len(nodes)]]) / 2
@@ -28,7 +28,11 @@ def total_area(xlist, ylist):
         tot_area += last_triangle_area
         return tot_area
 
-xlist = [1, 4, -2, -5]
-ylist = [2, 3, 4, 5]
+xlist = [0, 2, 2, 0]
+ylist = [0, 0, 2, 2]
+print(round(total_area(xlist, ylist), 2))
 
-print(total_area(xlist, ylist))
+
+
+
+     
