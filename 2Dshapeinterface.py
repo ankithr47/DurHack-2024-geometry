@@ -5,16 +5,17 @@ from node import *
 
 x_list = []
 y_list = []
-#take 4 coordinates from the user
+#take coordinates from the user
 count = 0
 while count < 4:
     coords = input("enter coordinates: ").split(',')
     x_list.append(int(coords[0]))
     y_list.append(int(coords[1]))
     count += 1
+    
 
 # order coordinates so that a quadrilateral can be drawn between the points
-x_new_lst, y_new_lst = node.order(x_list, y_list)
+x_new_lst, y_new_lst = node.efficient_order(x_list, y_list)
 
 # create the shape from the points
 points = np.column_stack((x_new_lst, y_new_lst))

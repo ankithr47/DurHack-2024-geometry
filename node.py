@@ -58,6 +58,28 @@ class node:
         a1 = math.sqrt(s1*(s1-nodelist[0].distanceFrom(nodelist[1]))*(s1-nodelist[1].distanceFrom(nodelist[2]))*(s1-nodelist[2].distanceFrom(nodelist[0]))) # a1 = area of triangle 1
         a2 = math.sqrt(s2*(s2-nodelist[0].distanceFrom(nodelist[3]))*(s2-nodelist[3].distanceFrom(nodelist[2]))*(s2-nodelist[2].distanceFrom(nodelist[0]))) # a2 = area of triangle 2
         return a1 + a2
+    
+    def efficient_order(xlist, ylist):
+        '''this method is more efficient than order,
+        as it has O(nlogn) whereas order has O(n!)'''
+        # Calculate the centroid of the points
+        centroid_x = sum(xlist) / len(xlist)
+        centroid_y = sum(ylist) / len(ylist)
+        
+        # Compute the angle of each point relative to the centroid
+        points = list(zip(xlist, ylist))
+        angles = [
+            math.atan2(y - centroid_y, x - centroid_x) for x, y in points
+        ]
+        
+        # Sort points based on the angles in counterclockwise order
+        sorted_points = sorted(zip(points, angles), key=lambda item: item[1])
+        
+        # Unpack the sorted points into x and y lists
+        ordered_points = [p for p, angle in sorted_points]
+        ordered_x, ordered_y = zip(*ordered_points)
+        
+        return list(ordered_x), list(ordered_y)
 
     '''Function below doesn't quite work yet. The aim is to find the area
     of any regular/irregular polygon by splitting it up into triangles
@@ -86,6 +108,14 @@ class node:
         last_triangle_area = math.sqrt(s1*(s1-nodes[0].distanceFrom(nodes[1]))*(s1-nodes[1].distanceFrom(nodes[2]))*(s1-nodes[2].distanceFrom(nodes[0])))
         tot_area += last_triangle_area
         return tot_area
+
+    
+
+    
+    
+
+
+
 
 
 
