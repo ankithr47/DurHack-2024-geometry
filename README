@@ -7,3 +7,5 @@ To overcome the challenge of irregular shapes, we split each quadrilateral into 
 Currently, we are trying to extend this to computing the area of any n-sided polygon.
 
 *Run the code* by running 2Dshapeinterface.py. Import the node class & ensure all imported modules are installed on your device.
+
+pandas: [install pandas by following instructions here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://pandas.pydata.org/docs/getting_started/install.html&ved=2ahUKEwjQkPmxvYWKAxWeVkEAHRP-FqYQFnoECBcQAQ&usg=AOvVaw3dL8PeWOPyyHguqK7H_5QN)
