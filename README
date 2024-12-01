@@ -6,7 +6,7 @@ visualize quadrilateral areas using matplotlib.
 To overcome the challenge of irregular shapes, we split each quadrilateral into 2 triangles, and computed the area of each triangled using Heron's formula.
 Currently, we are trying to extend this to computing the area of any n-sided polygon.
 
-*Run the code* by running 2Dshapeinterface.py. Import the node class from node.py & ensure matplotlib, numpy, and shapely are installed on your device. Follow these links for installation instructions:
+**Run the code** by running 2Dshapeinterface.py. Import the node class from node.py & ensure matplotlib, numpy, and shapely are installed on your device. Follow these links for installation instructions:
 
 [Matplotlib](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://matplotlib.org/stable/install/index.html&ved=2ahUKEwiioeqAv4WKAxWjU0EAHTIJDT0QFnoECBwQAQ&usg=AOvVaw0fJS86Q3cgQGtiUteq-nIJ)
 
