@@ -110,6 +110,26 @@ class node:
         return tot_area
 
     
+    def total_area_shoelace(xlist, ylist):
+        #create list of vertices
+        vertices = [node(x,y) for x,y in zip(xlist, ylist)]
+        vertices.append(vertices[0])
+        #use shoelace theorem
+        #calculate left sum
+        lsum = 0
+        for i in range(len(vertices)-1):
+            lsum += (vertices[i].x *vertices[i+1].y)
+        #calculate right sum
+        rsum = 0
+        for j in range(len(vertices)-1):
+            rsum += (vertices[j].y *vertices[j+1].x)
+        
+        total = 0.5 * abs(lsum - rsum)
+        return total
+
+
+
+    
 
     
     

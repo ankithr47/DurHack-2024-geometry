@@ -28,10 +28,9 @@ def total_area(xlist, ylist):
         tot_area += last_triangle_area
         return tot_area
 
-xlist = [0, 2, 2, 0]
-ylist = [0, 0, 2, 2]
-print(round(total_area(xlist, ylist), 2))
-
+a = [1,2,3]
+a.append(a[0])
+print(a)
 
 
 
